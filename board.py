@@ -26,16 +26,16 @@ def init():
 	gpio_exander_int = GPIO("/dev/gpiochip0", 5, "in")
 
 def turn_on_siren():
-	gpio_siren.write(1)
+	gpio_siren.write(True)
 
 def turn_off_siren():
-	gpio_siren.write(0)
+	gpio_siren.write(False)
 
 def turn_on_door_relay():
-	gpio_door.write(1)
+	gpio_door.write(True)
 
 def turn_off_door_relay():
-	gpio_door.write(0)
+	gpio_door.write(False)
 
 def door_ramp_status():
 	return gpio_door_ramp.read()
